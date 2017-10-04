@@ -1,7 +1,5 @@
 package mybnb;
 
-import java.util.ArrayList;
-
 public class Test {
 	public static void main(String[] args) {	
 		// Create 9 Property Objects
@@ -26,6 +24,8 @@ public class Test {
 		fillInProperties(propertiesArray);
 		
 		printAllProperties();
+		
+		System.out.println(calculateTotalIncome());
 		}
 	
 
@@ -83,7 +83,8 @@ public class Test {
 			for(BnBVilla villa: BnBProperty.villaList) {
 				totalIncome += villa.calculateIncome();
 			}
-		
+			
+			return totalIncome;
 	}
 
 }
